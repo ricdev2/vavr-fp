@@ -16,7 +16,7 @@ public class CompositionTest {
 
         Function1<Integer, Integer> addAndMultiply = addOne.andThen(multiplyOne);
 
-        // The execute is by order.
+        // Add 1 and then multiply by 2.
         assertEquals(Integer.valueOf(8), addAndMultiply.apply(3));
 
     }
@@ -29,7 +29,7 @@ public class CompositionTest {
 
         Function1<Integer, Integer> compose = addOne.compose(multiplyOne);
 
-        // First multiply by 2 and add 1, the order execution is inverse when using compose.
+        // Multiply by 2 and add 1. As you can see the execution order is inverted when using compose, it starting from last function added.
         assertEquals(Integer.valueOf(7), compose.apply(3));
     }
 }

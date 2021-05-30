@@ -10,7 +10,7 @@ public class FunctionTest {
 
     @Test
     public void create_function() {
-        // Supporting us of lambdas, function receives a parameter of type Integer and returns an Integer, the processing only increases the value by 1
+        // Supporting us of lambdas, function receives a parameter of type Integer and returns an Integer, the processing only increases the value by 1.
         Function1<Integer, Integer> addOne = a -> a + 1;
 
         assertEquals(Integer.valueOf(8), addOne.apply(7));

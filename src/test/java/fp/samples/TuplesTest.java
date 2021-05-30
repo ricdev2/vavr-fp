@@ -10,16 +10,14 @@ public class TuplesTest {
 
     @Test
     public void create_tuples() {
+        // Declaration:
         Tuple2<String, Integer> data= Tuple.of("M5", 2000);
-        // Accessing by method:
-        data._1();     //---> 3
-        data._2();     //---> "M5"
-        // Or using final variables
-        String elm1 = data._1;       //---> 3
-        Integer elm2 = data._2;       //---> "M5"
-
-        assertEquals("M5", elm1);
-        assertEquals(Integer.valueOf(2000), elm2);
+        // Accessing by method.
+        data._1();     // ---> "M5"
+        data._2();     // ---> 3
+        // Access using variables.
+        String elm1 = data._1;         //---> "M5"
+        Integer elem2 = data._2;       //---> 3
 
     }
 }

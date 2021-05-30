@@ -33,10 +33,10 @@ public class CurryingTest {
                 DayOfWeek.FRIDAY);
         // Adding 1 day for the next workout.
         Function1<DayOfWeek, Map<String, DayOfWeek>> sessionTwo = sessionOne.apply(DayOfWeek.TUESDAY);
-        // Adding final workout.
+        // Adding the final day.
         Map<String, DayOfWeek> workoutWeek = sessionTwo.apply(DayOfWeek.THURSDAY);
 
-        // Workout for all weekday.
+        // Workout for all weekdays.
         assertEquals(5, workoutWeek.size());
     }
 }

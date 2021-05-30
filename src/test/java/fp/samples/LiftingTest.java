@@ -11,9 +11,9 @@ public class LiftingTest {
     @Test
     public void lifting() {
         // Function can return 2 of results.
-        Function2<Integer, Integer, Option<Integer>> div = Function2.lift((a, b) -> a / b);
+        Function2<Integer, Integer, Option<Integer>> div =  Function2.lift((a, b) -> a / b);
 
-        // Here the execution could throw ArithmeticException: divide by zero, but get None.
+        // Here the execution could throw ArithmeticException: divide by zero, but we get None object.
         Option<Integer> fail = div.apply(100, 0);
         assertEquals(Option.none(), fail);
 

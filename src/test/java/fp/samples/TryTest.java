@@ -13,19 +13,22 @@ public class TryTest {
         try {
             // some exception occur.
         } catch(Exception e) {
-            // You can use Logging the error
-            // Or return some result: -1 :(
-            // And ...
+            // You can print in console the error
+            // Or return some result like number value ( -1 )
+            // Rethrow the exception ...
             throw new Exception("Error");
         }
 
         // Trying to avoid side effects like exceptions.
         int a = 5;
         int b = 0;
-        Try<Integer> result = Try.of(() ->  a / b); // A clear example of divide by zero.
+        // A clear example of divide by zero.
+        Try<Integer> result = Try.of(() ->  a / b);
 
         // Obtain the success or failed results.
-        result.onSuccess(integer -> assertEquals(Integer.valueOf(5), integer));
-        result.onFailure(throwable -> System.out.println(throwable));
+        result.
+        onSuccess(integer -> assertEquals(Integer.valueOf(5), integer));
+        result.
+        onFailure(throwable -> System.out.println(throwable));
     }
 }
